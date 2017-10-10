@@ -1,9 +1,18 @@
-# Multilabel-Classification-Datasets
+# Multilabel Classification Datasets
 
 This repository contains data pickels for multilabel classification dataset for easy research. 
 I like to think of this as my mini-contribution. Each directory contains a single datset, with the respective pickles and `count.txt` which give the dimensions of features and labels in the order.
 
-## Using the datsets :
+## File Format 
+```
+dataset_name
+|____________ dataset_name-train-features.pkl
+|____________ dataset_name-test-features.pkl
+|____________ dataset_name-train-labels.pkl
+|____________ dataset_name-test-labels.pkl
+```
+
+## Using the datsets 
 ```python
 import numpy as np
 
@@ -24,7 +33,7 @@ Download the dataset and put it in this folder. Create a `count.txt` in the dire
 features_dim
 labels_dim
 ```
-### Installation && Running
+### Installation & Running
 ```shell
 pip3 install liac-arff 
 python3 to_numpy --dataset dataset_name
