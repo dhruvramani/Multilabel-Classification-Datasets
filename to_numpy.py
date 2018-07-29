@@ -22,7 +22,7 @@ if __name__ == '__main__':
     print("Starting Training")
     parser = argparse.ArgumentParser()
     parser.add_argument("--dataset", help="Name of the Datset")
-    args = Parser().get_parser().parse_args()
+    args = parser().get_parser().parse_args()
     dataset = args.dataset
     features_dim, labels_dim = set_dims("./" + dataset + "/")
     train_features, train_labels = get_features("./" + dataset + "/" + dataset + "-train.arff", features_dim), get_labels("./" + dataset + "/" + dataset + "-train.arff", features_dim, labels_dim)
